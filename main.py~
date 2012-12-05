@@ -19,7 +19,7 @@ class MainHandler(webapp2.RequestHandler):
 	timeline = api.user_timeline(count=200, screen_name = arg,  trim_user=True, include_rts=True)
 	ctr=1
 	for tweet in timeline: 
-		self.response.out.write('<html><title>Tweet Loader</title>')		
+		self.response.out.write('<title>Tweet Loader</title>')		
 		self.response.out.write(ctr)
 		self.response.out.write(". ")
 		self.response.out.write(tweet.text)
